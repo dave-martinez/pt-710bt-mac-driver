@@ -101,6 +101,11 @@ make test     # renders a test PDF through the real CUPS chain, decodes it to te
 - Bluetooth isn't supported. Share the queue from one Mac if others need it.
 - Uninstall: `make uninstall`.
 
+## Disclaimer
+
+Not affiliated with or endorsed by Brother Industries. Brother and P-touch are
+trademarks of Brother Industries, Ltd.
+
 ## Licence
 
 MIT. Copyright (c) 2026 Dave Martinez <dave.martinez25@gmail.com>. See [LICENSE](LICENSE).
