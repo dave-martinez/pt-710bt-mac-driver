@@ -1,0 +1,136 @@
+*PPD-Adobe: "4.3"
+*%
+*% Brother PT-P710BT (P-touch Cube Plus), 24 mm TZe tape.
+*% Open driver: pages are rasterised at 180 dpi and sent through rastertopt710bt.
+*%
+*% Page sizes are landscape (label length x 24 mm tape) to match Snipe-IT's
+*% Tapes\Brother\TZe_24mm_* label templates, so PDFs print 1:1 without rotation.
+*%
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "PTP710BT.PPD"
+*Manufacturer: "Brother"
+*Product: "(PT-P710BT)"
+*ModelName: "Brother PT-P710BT 24mm"
+*ShortNickName: "Brother PT-P710BT 24mm"
+*NickName: "Brother PT-P710BT 24mm tape (open driver)"
+*1284DeviceID: "MFG:Brother;MDL:PT-P710BT;CLS:PRINTER;"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 2.2
+*cupsModelNumber: 0
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 0 /Library/Printers/PT-P710BT/Filter/rastertopt710bt"
+
+*% ---------------------------------------------------------------- Page size
+*% The imageable area is the full page so macOS rasterises all of it; Chrome
+*% doesn't honour PPD margins for HTML anyway. The filter centres the ink on the
+*% 18.1 mm the print head covers, and absorbs the printer's 2 mm end feeds.
+*HWMargins: 0 0 0 0
+*VariablePaperSize: True
+*MaxMediaWidth: "2834.65"
+*MaxMediaHeight: "68.03"
+
+*OpenUI *PageSize/Label Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Tape24x78mm
+*PageSize Tape24x34mm/34 x 24 mm (Snipe-IT TZe_24mm_C): "<</PageSize[96.38 68.03]/ImagingBBox null>>setpagedevice"
+*PageSize Tape24x45mm/45 x 24 mm (Snipe-IT TZe_24mm_E): "<</PageSize[127.56 68.03]/ImagingBBox null>>setpagedevice"
+*PageSize Tape24x65mm/65 x 24 mm (Snipe-IT TZe_24mm_A/D): "<</PageSize[184.25 68.03]/ImagingBBox null>>setpagedevice"
+*PageSize Tape24x73mm/73 x 24 mm (Snipe-IT TZe_24mm_B): "<</PageSize[206.93 68.03]/ImagingBBox null>>setpagedevice"
+*PageSize Tape24x78mm/78 x 24 mm (Windows driver default): "<</PageSize[221.1 68.03]/ImagingBBox null>>setpagedevice"
+*PageSize Tape24x100mm/100 x 24 mm: "<</PageSize[283.46 68.03]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Label Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Tape24x78mm
+*PageRegion Tape24x34mm/34 x 24 mm (Snipe-IT TZe_24mm_C): "<</PageSize[96.38 68.03]/ImagingBBox null>>setpagedevice"
+*PageRegion Tape24x45mm/45 x 24 mm (Snipe-IT TZe_24mm_E): "<</PageSize[127.56 68.03]/ImagingBBox null>>setpagedevice"
+*PageRegion Tape24x65mm/65 x 24 mm (Snipe-IT TZe_24mm_A/D): "<</PageSize[184.25 68.03]/ImagingBBox null>>setpagedevice"
+*PageRegion Tape24x73mm/73 x 24 mm (Snipe-IT TZe_24mm_B): "<</PageSize[206.93 68.03]/ImagingBBox null>>setpagedevice"
+*PageRegion Tape24x78mm/78 x 24 mm (Windows driver default): "<</PageSize[221.1 68.03]/ImagingBBox null>>setpagedevice"
+*PageRegion Tape24x100mm/100 x 24 mm: "<</PageSize[283.46 68.03]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Tape24x78mm
+*ImageableArea Tape24x34mm: "0 0 96.38 68.03"
+*ImageableArea Tape24x45mm: "0 0 127.56 68.03"
+*ImageableArea Tape24x65mm: "0 0 184.25 68.03"
+*ImageableArea Tape24x73mm: "0 0 206.93 68.03"
+*ImageableArea Tape24x78mm: "0 0 221.1 68.03"
+*ImageableArea Tape24x100mm: "0 0 283.46 68.03"
+
+*DefaultPaperDimension: Tape24x78mm
+*PaperDimension Tape24x34mm: "96.38 68.03"
+*PaperDimension Tape24x45mm: "127.56 68.03"
+*PaperDimension Tape24x65mm: "184.25 68.03"
+*PaperDimension Tape24x73mm: "206.93 68.03"
+*PaperDimension Tape24x78mm: "221.1 68.03"
+*PaperDimension Tape24x100mm: "283.46 68.03"
+
+*% Any label length from 4.4 mm to 1000 mm; tape width fixed at 24 mm.
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 12.47 2834.65
+*ParamCustomPageSize Height: 2 points 68.03 68.03
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
+*% ---------------------------------------------------------------- Resolution
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 20 AnySetup *Resolution
+*DefaultResolution: 180dpi
+*Resolution 180dpi/180 dpi: "<</HWResolution[180 180]/cupsBitsPerColor 8/cupsColorSpace 0/cupsColorOrder 0>>setpagedevice"
+*CloseUI: *Resolution
+
+*% ---------------------------------------------------------------- Label options
+*OpenUI *CutMode/Cutting: PickOne
+*OrderDependency: 30 AnySetup *CutMode
+*DefaultCutMode: AutoCut
+*CutMode AutoCut/Cut after each label: ""
+*CutMode NoCut/Don't cut: ""
+*CloseUI: *CutMode
+
+*OpenUI *ChainPrint/Chain Printing (saves tape, last label waits for next job): Boolean
+*OrderDependency: 30 AnySetup *ChainPrint
+*DefaultChainPrint: False
+*ChainPrint True/On: ""
+*ChainPrint False/Off: ""
+*CloseUI: *ChainPrint
+
+*OpenUI *Darkness/Black Threshold: PickOne
+*OrderDependency: 30 AnySetup *Darkness
+*DefaultDarkness: Normal
+*Darkness Light/Light (only dark greys print): ""
+*Darkness Normal/Normal: ""
+*Darkness Dark/Dark (light greys print too): ""
+*CloseUI: *Darkness
+
+*OpenUI *CentreLabel/Centre on tape: Boolean
+*OrderDependency: 30 AnySetup *CentreLabel
+*DefaultCentreLabel: True
+*CentreLabel True/On: ""
+*CentreLabel False/Off: ""
+*CloseUI: *CentreLabel
+
+*OpenUI *FlipLabel/Rotate 180 degrees: Boolean
+*OrderDependency: 30 AnySetup *FlipLabel
+*DefaultFlipLabel: False
+*FlipLabel True/On: ""
+*FlipLabel False/Off: ""
+*CloseUI: *FlipLabel
+
+*% ---------------------------------------------------------------- Fonts
+*DefaultFont: Courier
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM

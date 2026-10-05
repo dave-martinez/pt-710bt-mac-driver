@@ -1,0 +1,11 @@
+# Build output
+build/
+
+# Test artefacts (make test)
+test/
+
+# Brother's command reference is copyrighted; it's linked from the README
+docs/
+
+# macOS
+.DS_Store
